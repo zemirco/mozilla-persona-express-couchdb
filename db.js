@@ -1,7 +1,8 @@
 
 var nano = require('nano');
 // not included in repo - use your own CouchDB instance
-var config;
+var config = {};
+
 if (process.env.NODE_ENV === 'production') {
   config.user = process.env.user;
   config.pw = process.env.pw;
