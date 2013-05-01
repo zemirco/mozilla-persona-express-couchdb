@@ -1,0 +1,27 @@
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+[class^="icon-"],[class*=" icon-"] {
+  background-image:url("../images/glyphicons-halflings.png");
+}
+
+.icon-white,
+.nav-pills>.active>a>[class^="icon-"],
+.nav-pills>.active>a>[class*=" icon-"],
+.nav-list>.active>a>[class^="icon-"],
+.nav-list>.active>a>[class*=" icon-"],
+.navbar-inverse .nav>.active>a>[class^="icon-"],
+.navbar-inverse .nav>.active>a>[class*=" icon-"],
+.dropdown-menu>li>a:hover>[class^="icon-"],
+.dropdown-menu>li>a:focus>[class^="icon-"],
+.dropdown-menu>li>a:hover>[class*=" icon-"],
+.dropdown-menu>li>a:focus>[class*=" icon-"],
+.dropdown-menu>.active>a>[class^="icon-"],
+.dropdown-menu>.active>a>[class*=" icon-"],
+.dropdown-submenu:hover>a>[class^="icon-"],
+.dropdown-submenu:focus>a>[class^="icon-"],
+.dropdown-submenu:hover>a>[class*=" icon-"],
+.dropdown-submenu:focus>a>[class*=" icon-"] {
+  background-image:url("../images/glyphicons-halflings-white.png")
+}

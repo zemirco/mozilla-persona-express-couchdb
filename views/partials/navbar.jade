@@ -1,0 +1,21 @@
+div(class="navbar navbar-inverse navbar-fixed-top")
+  div(class="navbar-inner")
+    div(class="container")
+      a(class="brand", href="/") Sample App
+      div(class="nav-collapse collapse")
+        if email
+          ul(class="nav pull-right")
+            li(class="dropdown")
+              a(href="#", class="dropdown-toggle", data-toggle="dropdown")
+                | #{username || email} 
+                b(class="caret")
+              ul(class="dropdown-menu")
+                li
+                  a(href="/profile") Profile
+                li(class="divider")
+                li
+                  a#signout(href="#")
+                    i.icon-off
+                    |  Sign out
+        else
+          button#login(class="btn pull-right") Login

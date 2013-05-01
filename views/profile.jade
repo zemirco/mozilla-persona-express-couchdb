@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.row
+    div.span12
+      form.form-horizontal(method="post", action="/profile")
+        div.control-group
+          label.control-label(for="username") Username
+          div.controls
+            input(type="text", id="username", name="username", value=username)
+        div.control-group
+          label.control-label(for="email") Email
+          div.controls
+            input(type="email", id="email", name="email", disabled, value=email)
+        div.form-actions
+          button.btn.btn-primary(type="submit") Save changes
+          a.btn(href="/") Cancel

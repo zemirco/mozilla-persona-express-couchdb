@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  div.row
+    div.span12
+      p 
+        a(href="https://developer.mozilla.org/en-US/docs/Persona") Mozilla Persona
+        |  and CouchDB example app.
+      p CouchDB hosted at 
+        a(href="https://cloudant.com/") Cloudant.
+      p Click on 'Login' in the top right corner.
+      if email
+        hr
+        p You are now logged in!
+        p Visit your 
+          a(href="/profile") profile.

@@ -1,0 +1,19 @@
+doctype 5
+html
+  head
+    title= title
+    meta(http-equiv="X-UA-Compatible", content="IE=Edge")
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    include partials/navbar
+    div.container
+      block content
+    script(src="/javascripts/jquery-2.0.0.min.js")
+    script(src="/javascripts/bootstrap.min.js")
+    script(src="https://login.persona.org/include.js")
+    script(src="/javascripts/script.js")
+    script
+      function getEmail() {
+        return '#{email}'
+      }
