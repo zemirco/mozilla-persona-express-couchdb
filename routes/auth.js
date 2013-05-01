@@ -8,7 +8,7 @@ exports.login = function(req, resp) {
     url: 'https://login.persona.org/verify',
     json: {
       assertion: req.body.assertion,
-      audience: 'http://localhost:3000'
+      audience: 'http://mysterious-coast-9759.herokuapp.com/'
     }
   }, function(err, res, body) {
     console.log(body);
