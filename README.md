@@ -14,6 +14,11 @@ Built on the shoulder of giants
 
 Visit [mysterious-coast-9759.herokuapp.com](http://mysterious-coast-9759.herokuapp.com/) to see the app in action.
 It might take some time to load as it is running on the free dyno.
+
+If you don't want to use your own email (as it is stored in the db temporarily) check out these Identity Providers
+
+ - [mockmyid](https://mockmyid.com/)
+ - [personatestuser](http://personatestuser.org/)
  
 ## Other examples
 
