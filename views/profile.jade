@@ -4,6 +4,7 @@ block content
   div.row
     div.span12
       form.form-horizontal(method="post", action="/profile")
+        input(type="hidden", name="_csrf", value=token)
         div.control-group
           label.control-label(for="username") Username
           div.controls
