@@ -6,11 +6,33 @@ block content
       p 
         a(href="https://developer.mozilla.org/en-US/docs/Persona") Mozilla Persona
         |  and CouchDB example app.
-      p CouchDB hosted at 
-        a(href="https://cloudant.com/") Cloudant.
-      p Click on 'Login' in the top right corner.
+        | CouchDB hosted at 
+        a(href="https://cloudant.com/") Cloudant. 
+        | Running on a dyno at 
+        a(href="https://www.heroku.com/") Heroku.
+      p Built by Mirco Zeiss - 
+        a(href="http://mircozeiss.com/") http://mircozeiss.com/
+      p Built with
+        ul
+          li: a(href="http://expressjs.com/") Express
+          li: a(href="https://github.com/dscape/nano") nano
+          li: a(href="http://twitter.github.io/bootstrap/") Bootstrap
+          li: a(href="https://github.com/mikeal/request") Request
+          li: a(href="http://jquery.com/") jQuery
+      p Read my 
+        a(href="#") blog post 
+        | to learn more about this project.
+      p
+        a(href="https://twitter.com/zeMirco", class="twitter-follow-button", data-show-count="false") Follow @zeMirco
+      p
+        iframe(src="http://ghbtns.com/github-btn.html?user=zeMirco&repo=mozilla-persona-express-couchdb&type=watch&count=true&size=large", allowtransparency="true", frameborder="0", scrolling="0", width="170", height="30")
+        iframe(src="http://ghbtns.com/github-btn.html?user=zeMirco&repo=mozilla-persona-express-couchdb&type=fork&count=true&size=large", allowtransparency="true", frameborder="0", scrolling="0", width="170", height="30")
+      hr
       if email
-        hr
         p You are now logged in!
         p Visit your 
           a(href="/profile") profile.
+      else
+        p
+          i.icon-chevron-right
+          | Click on 'Login' in the top right corner.
