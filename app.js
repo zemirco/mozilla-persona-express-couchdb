@@ -20,7 +20,7 @@ var app = express();
 // style-src 'unsafe-inline' is required for chrome+jquery bug
 var policy =  "default-src 'self';" +
               "frame-src 'self' https://login.persona.org https://platform.twitter.com http://platform.twitter.com http://ghbtns.com;" +
-              "script-src 'self' https://login.persona.org http://platform.twitter.com;" +
+              "script-src 'self' 'unsafe-inline' https://login.persona.org http://platform.twitter.com;" +
               "style-src 'self' 'unsafe-inline'";
 
 app.use(function(req, res, next) {
