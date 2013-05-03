@@ -16,6 +16,7 @@ var app = express();
 
 // csp middleware
 // Important: twitter and ghbtns are not needed!
+// script-src 'unsafe-inline' is needed for twitter and bootstrap
 // they are here for the demo
 // style-src 'unsafe-inline' is required for chrome+jquery bug
 var policy =  "default-src 'self';" +
