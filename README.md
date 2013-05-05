@@ -41,6 +41,10 @@ However, all of the examples were missing some features I'd like to see. These a
 I tried to take the best features from the examples to create my own app.
 
 I'm sure my example can be improved as well. So if there is anything wrong or you see room for improvements, please open an [issue](https://github.com/zeMirco/mozilla-persona-express-couchdb/issues).
+
+## More
+
+To read more about this topic see my post [Mozilla Persona example app with Express and Couchdb](http://mircozeiss.com/mozilla-persona-example-app-with-express-and-couchdb/)
  
 ## Test
 
