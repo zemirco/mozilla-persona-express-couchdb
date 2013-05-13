@@ -27,15 +27,14 @@ exports.login = function(req, resp) {
       audience: audience
     }
   }, function(err, res, body) {
-    console.log(body);
     if (err) console.log(err);
     if (body.status === 'okay') {
       var email = body.email;
       req.session.email = email;
       // check if email is already saved in db
-      db.view('users', 'byEmail', function(err, body) {
+      db.view('users', 'byEmail', {key: email}, function(err, body) {
         if (err) console.log(err);
-        if (body.total_rows === 0) {
+        if (!body.rows[0]) {
           // email is not in db
           var user = {
             type: 'user',

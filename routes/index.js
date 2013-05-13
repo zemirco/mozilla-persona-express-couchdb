@@ -25,7 +25,7 @@ exports.get = function(req, res){
     res.render('index', {
       title: 'Express',
       email: email,
-      username: body.rows[0].value.username
+      username: (body.rows[0] && body.rows[0].value.username)
     });
   })
 };

@@ -13,7 +13,7 @@ exports.get = function(req, res) {
     res.render('profile', {
       title: 'Your profile',
       email: req.session.email,
-      username: body.rows[0].value.username
+      username: (body.rows[0] && body.rows[0].value.username)
     })
   })
 
@@ -32,7 +32,6 @@ exports.post = function(req, res) {
   db.view('users', 'byEmail', {key: email}, function(err, body) {
     if (err) console.log(err);
     // set username property
-    console.log(body.rows);
     var doc = body.rows[0].value;
     doc.username= username;
     // save document to db
