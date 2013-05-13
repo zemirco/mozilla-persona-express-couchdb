@@ -33,14 +33,16 @@ exports.login = function(req, resp) {
       var email = body.email;
       req.session.email = email;
       // check if email is already saved in db
-      db.head(email, function(err, body, header) {
+      db.view('users', 'byEmail', function(err, body) {
         if (err) console.log(err);
-        if (err && err.status_code === 404) {
+        if (body.total_rows === 0) {
           // email is not in db
-          var doc = {
+          var user = {
+            type: 'user',
+            email: email,
             username: ''
           };
-          db.insert(doc, email, function(err, body) {
+          db.insert(user, function(err, body) {
             if (err) console.log(err);
             resp.send(200);
           })
