@@ -20,12 +20,12 @@ exports.get = function(req, res){
   }
   
   // returning user -> get username
-  db.get(email, function(err, doc) {
+  db.view('users', 'byEmail', {key: email}, function(err, body) {
     if (err) console.log(err);
     res.render('index', {
       title: 'Express',
       email: email,
-      username: doc.username
+      username: body.rows[0].value.username
     });
   })
 };
