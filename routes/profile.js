@@ -9,11 +9,11 @@ var db = require('../db.js');
 exports.get = function(req, res) {
   var email = req.session.email;
 
-  db.get(email, function(err, doc) {
+  db.view('users', 'byEmail', {key: email}, function(err, body) {
     res.render('profile', {
       title: 'Your profile',
       email: req.session.email,
-      username: doc.username
+      username: body.rows[0].value.username
     })
   })
 
@@ -29,12 +29,14 @@ exports.post = function(req, res) {
   var username = req.body.username;
 
   // get document from db
-  db.get(email, function(err, doc) {
+  db.view('users', 'byEmail', {key: email}, function(err, body) {
     if (err) console.log(err);
     // set username property
+    console.log(body.rows);
+    var doc = body.rows[0].value;
     doc.username= username;
     // save document to db
-    db.insert(doc, email, function(err, body) {
+    db.insert(doc, function(err, body) {
       res.render('profile', {
         title: 'Your profile',
         email: email,
