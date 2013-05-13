@@ -21,7 +21,7 @@ exports.login = function(req, resp) {
   }
   
   request.post({
-    url: 'https://login.persona.org/verify',
+    url: 'https://verifier.login.persona.org/verify',
     json: {
       assertion: req.body.assertion,
       audience: audience
